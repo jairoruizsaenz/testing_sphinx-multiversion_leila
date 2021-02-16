@@ -7,11 +7,17 @@ pip install sphinx_rtd_theme
 pip install sphinx_copybutton
 pip install sphinx-multiversion
 
+:: Se debe incluir el template de versiones y hacer en el enlace en el archivo cong.py para agregar la pestañas de versiones con el tema read the docs de sphinx
+
+Plantilla de refenciar: https://holzhaus.github.io/sphinx-multiversion/master/templates.html#readthedocs-theme
+Se modificó la plantilla para poder cambiar el nombre del branch master
+
+----------------------------------------------------
 
 sphinx-multiversion ./sphinx/source .
 sphinx-multiversion ./sphinx/source . --dump-metadata
 
-
+----------------------------------------------------
 https://taylor.fausak.me/2016/05/09/add-files-to-github-releases/#:~:text=GitHub%20has%20allowed%20adding%20files,as%20they've%20had%20releases.&text=You%20can%20use%20it%20to,tags%20on%20your%20GitHub%20project.
 
 https://github.com/tfausak/github-release
