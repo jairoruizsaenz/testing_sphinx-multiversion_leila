@@ -27,31 +27,6 @@ version = 'latest'
 
 # -- General configuration ---------------------------------------------------
 
-# -- sphinx-multiversion -----------------------------------------------------
-
-# Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r'^.*$' # default
-
-# Whitelist pattern for branches (set to None to ignore all branches)
-# smv_branch_whitelist = r'^.*$' # default - all branches
-smv_branch_whitelist = r'^(?!documentacion).*$'
-
-# Pattern for released versions
-# smv_released_pattern = r'^tags/.*$'
-# smv_released_pattern = r'^(heads|remotes/[^/]+)/(?!:master).*$' # Everything except master branch
-
-# Format for versioned output directories inside the build directory
-smv_outputdir_format = '{ref.name}' # default - Use the branch/tag name
-smv_outputdir_format = '{config.version}/{ref.name}'  # Use the version from conf.py as parent directory and the branch/tag name as subdirectory
-
-# Whitelist pattern for remotes (set to None to use local branches only)
-# smv_remote_whitelist = None # default
-smv_remote_whitelist = r'^(origin)$'
-
-# Determines whether remote or local git branches/tags are preferred if their output dirs conflict
-smv_prefer_remote_refs = True
-
-# ----------------------------------------------------------------------------
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
