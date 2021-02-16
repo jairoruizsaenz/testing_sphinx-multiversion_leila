@@ -36,7 +36,7 @@ smv_tag_whitelist = r'^.*$' # default
 
 # Whitelist pattern for branches (set to None to ignore all branches)
 # smv_branch_whitelist = r'^.*$' # default - all branches
-smv_branch_whitelist = r'^(?!documentacion).*$'
+smv_branch_whitelist = r'^(?!gh-pages).*$'
 
 # Pattern for released versions
 # smv_released_pattern = r'^tags/.*$'
@@ -44,7 +44,7 @@ smv_branch_whitelist = r'^(?!documentacion).*$'
 
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{ref.name}' # default - Use the branch/tag name
-smv_outputdir_format = '{config.version}/{ref.name}'  # Use the version from conf.py as parent directory and the branch/tag name as subdirectory
+# smv_outputdir_format = '{config.version}/{ref.name}'  # Use the version from conf.py as parent directory and the branch/tag name as subdirectory
 
 # Whitelist pattern for remotes (set to None to use local branches only)
 # smv_remote_whitelist = None # default
