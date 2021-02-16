@@ -7,12 +7,46 @@ pip install sphinx_rtd_theme
 pip install sphinx_copybutton
 pip install sphinx-multiversion
 
-:: Se debe incluir el template de versiones y hacer en el enlace en el archivo cong.py para agregar la pestañas de versiones con el tema read the docs de sphinx
+:: Actualizar la documentación
 
-Plantilla de refenciar: https://holzhaus.github.io/sphinx-multiversion/master/templates.html#readthedocs-theme
-Se modificó la plantilla para poder cambiar el nombre del branch master
+1. Active el branch gh-pages
+2. Borre la carpeta versiones
+3. Modifique el archivo sphinx/source/conf.py en caso de ser necesario (en caso de crear un nuevo release)
+4. Desde la carpeta base corra el comando 
+    sphinx-multiversion ./sphinx/source .
+5. Haga commit y push en el branch gh-pages con los nuevos archivos
 
-----------------------------------------------------
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:: Solución a posibles errores
+
+- El tema sphinx_rtd_theme no tiene la pestaña de versiones
+
+    * Debe asegurarse que el archivo de configuración sphinx/source/conf.py tenga definida la ruta de templates
+        templates_path = ['_templates']
+
+    * Incluir la plantilla de versiones
+        sphinx/source/_templates/versions.html
+
+    Para mayor detalle visitar el enlace: https://holzhaus.github.io/sphinx-multiversion/master/templates.html#readthedocs-theme
+    * Vale la pena mencionar que se utiliza una plantilla similar a la presentada en el enlace anterior. Sin embargo, se modificó para poder cambiar el nombre del branch master    
+
+- Al actualizar la documentación no se genera la documentación de un release o branch
+
+    * Debe verificar la configuración del archivo sphinx/source/conf.py
+        Las variables smv_tag_whitelist y smv_branch_whitelist contienen expresiones regulares que permiten ignorar tags o ramas en particular
+
+    Para mayor información puede consultar el enlace https://holzhaus.github.io/sphinx-multiversion/master/configuration.html
+         
+- Los nombres de las versiones están mal
+    
+    * En el tema readthedocs hay dos partes donde se puede ver la versión que se está consultando.
+    
+    1. En la esquina superior izquierda debajo del logo. Este valor se toma de la variable version del archivo sphinx/source/conf.py. Para modificar el valor de una versión en particular se debe modificar esta variable en la rama o realese respectivo.
+
+    2. En la esquina inferior izquierda en la sección de versiones. Los nombres de las versiones se toman del nombre de las ramas o tags utilizados, a excepción de la rama master. El nombre de la rama master se está modificando en el template sphinx/source/_templates/versions.html
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 sphinx-multiversion ./sphinx/source .
 sphinx-multiversion ./sphinx/source . --dump-metadata
