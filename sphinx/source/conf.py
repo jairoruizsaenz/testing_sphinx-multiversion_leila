@@ -31,8 +31,8 @@ version = 'Versión ' + release
 # -- sphinx-multiversion -----------------------------------------------------
 
 # Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r'^.*$' # default
-# smv_tag_whitelist = r'^(?!v0.1).*$' # ignora la versión v0.1
+# smv_tag_whitelist = r'^.*$' # default
+smv_tag_whitelist = r'^(?!v0.6).*$' # ignora la versión v0.1
 
 # Whitelist pattern for branches (set to None to ignore all branches)
 # smv_branch_whitelist = r'^.*$' # default - all branches
