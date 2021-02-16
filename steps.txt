@@ -21,3 +21,5 @@ sphinx-multiversion ./sphinx/source . --dump-metadata
 https://taylor.fausak.me/2016/05/09/add-files-to-github-releases/#:~:text=GitHub%20has%20allowed%20adding%20files,as%20they've%20had%20releases.&text=You%20can%20use%20it%20to,tags%20on%20your%20GitHub%20project.
 
 https://github.com/tfausak/github-release
+
+https://github.com/github-release/github-release
