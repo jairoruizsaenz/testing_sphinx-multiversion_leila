@@ -8,3 +8,5 @@ pip install sphinx_copybutton
 pip install sphinx-multiversion
 
 
+sphinx-multiversion ./sphinx/source .
+sphinx-multiversion ./sphinx/source . --dump-metadata

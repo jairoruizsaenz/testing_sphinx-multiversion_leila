@@ -31,12 +31,8 @@ version = 'Versión ' + release
 smv_outputdir_format = '{ref.name}'
 
 smv_tag_whitelist = r'^.*$'
-smv_branch_whitelist = r'^(?!documentacion).*$'
+smv_branch_whitelist = r'^(?!gp-pages).*$'
 smv_remote_whitelist = None # (set to None to use local branches only)
-
-print('::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::')
-print(f'SPHINX_MULTIVERSION_NAME: {os.getenv("SPHINX_MULTIVERSION_NAME")}')
-print('::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::')
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -54,7 +50,7 @@ rinoh_documents = [('index',                                      # top-level fi
 
 latex_elements = {
     'classoptions': ',openany',
-    'babel': r'\usepackage[english]{babel}',
+    'babel': r'\usepackage[spanish]{babel}',
 }
 
 # Add any paths that contain templates here, relative to this directory.
