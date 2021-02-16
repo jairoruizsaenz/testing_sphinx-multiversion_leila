@@ -36,7 +36,7 @@ smv_tag_whitelist = r'^.*$' # default
 
 # Whitelist pattern for branches (set to None to ignore all branches)
 # smv_branch_whitelist = r'^.*$' # default - all branches
-smv_branch_whitelist = r'^(?!gh-pages).*$'
+smv_branch_whitelist = r'^(?!gh-pages|HEAD).*$'
 
 # Pattern for released versions
 # smv_released_pattern = r'^tags/.*$'
