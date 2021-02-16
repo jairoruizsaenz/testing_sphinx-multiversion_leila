@@ -1,5 +1,5 @@
 
-:: crear entorno virtual y utilizar el archivo requirements.txt o proceder a realizar las siguientes instalaciones
+:: Cree un entorno virtual e instale las librerías necesarias mediante el archivo requirements.txt o proceda a instalar las siguientes librerías.
 
 pip install leila
 pip install -U sphinx
