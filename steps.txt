@@ -1,0 +1,10 @@
+
+:: crear entorno virtual y utilizar el archivo requirements.txt o proceder a realizar las siguientes instalaciones
+
+pip install leila
+pip install -U sphinx
+pip install sphinx_rtd_theme
+pip install sphinx_copybutton
+pip install sphinx-multiversion
+
+
