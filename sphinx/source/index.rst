@@ -9,6 +9,7 @@ LEILA - Librería de calidad de datos
    introduccion   
    instalacion
    ejemplos
+   nueva_seccion
       
 .. toctree::
    :maxdepth: 2
